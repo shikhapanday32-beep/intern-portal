@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome, <span id="user-name"></span>!</h2>
+    <p>Your Referral Code: <span id="ref-code"></span></p>
+    <p>Your Donation: ₹<span id="donation-amount"></span></p>
+  </div>
+
+  <script>
+    document.getElementById("user-name").innerText = localStorage.getItem("username") || "Guest";
+    document.getElementById("ref-code").innerText = localStorage.getItem("referral") || "-";
+    document.getElementById("donation-amount").innerText = localStorage.getItem("donation") || "0";
+  </script>
+</body>
+</html>
